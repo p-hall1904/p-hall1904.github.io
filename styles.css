@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Set background color to black */
+    color: #fff;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.profile-pictures {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.profile-img {
+    flex: 1;
+    height: auto;
+    max-height: 200px; /* Set maximum height */
+    border-radius: 0;
+    margin: 0;
+    animation: glow 1s infinite alternate; /* Apply the glow animation */
+}
+
+.first-picture {
+    box-shadow: 0 0 15px 5px rgba(128, 0, 128, 0.8), /* Apply glow effect to top, right, and bottom */
+                -10px 0 15px -10px rgba(0, 0, 0, 0); /* Remove glow effect on the left */
+}
+
+.middle-picture {
+    box-shadow: 0 10px 15px -10px rgba(128, 0, 128, 0.8), /* Top glow effect */
+                0 -10px 15px -10px rgba(128, 0, 128, 0.8); /* Bottom glow effect */
+}
+
+.third-picture {
+    box-shadow: 0 0 15px 5px rgba(128, 0, 128, 0.8), /* Apply glow effect to top, left, and bottom */
+                10px 0 15px -10px rgba(0, 0, 0, 0); /* Remove glow effect on the right */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 15px 5px rgba(128, 0, 128, 0.8); /* Initial glow effect */
+    }
+    100% {
+        box-shadow: 0 0 25px 10px rgba(128, 0, 128, 0.8); /* Final glow effect */
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    background-color: #222;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin-top: 2em;
+    border-radius: 10px;
+}
+
+p, li {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+a {
+    color: #bf40bf;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.contact {
+    margin-top: 2em;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1em 0;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p, li {
+        font-size: 1em;
+    }
+}
